@@ -1,0 +1,29 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	string number;
+	float summ = 0;
+	float arithmetic_mean = 0;
+	float number_of_digits = 0;
+	string a;
+	cout << "Введите число: ";
+	cin >> number;
+	
+
+	for (int i = 0; i < number.length(); i++)
+	{
+		a = number[i];
+		number_of_digits++;
+		summ += stoi(a);
+	}
+	arithmetic_mean = summ / number.length();
+	cout << "Количество цифр: " << number_of_digits << endl;
+	cout << "Сумма = " << summ << endl;
+	cout << "Cреднеарифметическое = " << arithmetic_mean;
+}
+
+
