@@ -1,0 +1,63 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    int number_of_people = 0;
+    int price = 0;
+    int order;
+    cout << "На сколько человек заказ: ";
+    cin >> number_of_people;
+    
+
+    for (int i = 0; i < number_of_people; i++)
+    {
+        cout << "Напитки: 1)Кола 2)Кофе 3)Чай 4)Кокосовое молоко 5)Яблочный сок ";
+        cin >> order;
+        switch (order)
+        {
+        case 1:
+            price += 89;
+            break;
+        case 2:
+            price += 100;
+            break;
+        case 3:
+            price += 50;
+            break;
+        case 4:
+            price += 230;
+            break;
+        case 5:
+            price += 76;
+            break;
+        default:
+            cout << "У нас нет этого в меню";
+            break;
+        }
+    }
+    for (int i = 0; i < number_of_people; i++)
+    {
+        cout << "Кондитерские изделия: 1)Шоколад 2)Эклеры 3)Тирамису ";
+        cin >> order;
+        switch (order)
+        {
+        case 1:
+            price += 90;
+            break;
+        case 2:
+            price += 130;
+            break;
+        case 3:
+            price += 200;
+            break;
+        default:
+            cout << "У нас нет этого в меню";
+            break;
+        }
+        
+    }
+    cout << "С вас " << price;
+}
+
