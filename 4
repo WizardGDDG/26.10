@@ -1,0 +1,27 @@
+#include <iomanip>
+#include <iostream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "rus");
+	int number = 0;
+	string a[10] = { "A","B","C","D","E","F","G","H","I","J"};
+	for (int i = 0; i < 81; i++)
+	{
+		cout << setw(3) <<a[i] << number;
+		if (a[i] == "J")
+		{
+			if (a[i] == "J" and number == 9)
+			{
+				break;
+			}
+			cout << endl;
+			number++;
+			i = 0;
+			
+		}
+	}
+
+
+
+}
